@@ -116,41 +116,5 @@ class input_controller(QtWidgets.QMainWindow):
         except (UnboundLocalError, NameError,IndexError):
             self.input.textBrowser.append("Peformance point not found")
 
-        
 
 
-
-
-    
-
-  
-
-
-
-
-    
-
-
-
-
-   
-
-       
- 
-
-    # set the layout
-    #   layout = QtGui.QVBoxLayout()
-    #   layout.addWidget(self.toolbar)
-    #   layout.addWidget(self.canvas)
-    #   layout.addWidget(self.button)
-    #   self.setLayout(layout)
-
-
-      
-    
-    # windowList= []
-    # def FlexCalClicked(self):
-    #   thewindow = QtWidgets.QMainWindow()
-    #   self.ui = FlexCal_controller()
-    #   self.windowList.append(thewindow)
-    #   thewindow.show()
