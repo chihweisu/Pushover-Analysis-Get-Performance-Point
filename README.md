@@ -11,7 +11,7 @@ You can also save the figure quickly
 ### Step 1
   run `starter.py`, GUI will appear as shown below:
   <div align="center">
-  <img  src="https://raw.githubusercontent.com/chihweisu/Pushover-Analysis-Get-Performance-Point/e13abf66c921035a7d75f57e67bb961a3cb3af52/Readme_asset/1.PNG" width="40%">
+  <img  src="https://raw.githubusercontent.com/chihweisu/Pushover-Analysis-Get-Performance-Point/e13abf66c921035a7d75f57e67bb961a3cb3af52/Readme_asset/1.PNG" width="50%">
   </div> 
   
 ### Step 2
@@ -25,7 +25,7 @@ You can also save the figure quickly
 ## Step 3 
   The Output is shown below. You can also save the figure by clicking the button below.
   <div align="center">
-  <img  src="https://raw.githubusercontent.com/chihweisu/Pushover-Analysis-Get-Performance-Point/e13abf66c921035a7d75f57e67bb961a3cb3af52/Readme_asset/3.PNG" width="40%">
+  <img  src="https://raw.githubusercontent.com/chihweisu/Pushover-Analysis-Get-Performance-Point/e13abf66c921035a7d75f57e67bb961a3cb3af52/Readme_asset/3.PNG" width="50%">
   </div> 
 
 
