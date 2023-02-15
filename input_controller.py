@@ -4,9 +4,9 @@ from input import Ui_PushoverCurve
 from datetime import datetime
 import numpy as np
 import math
-from data_function import Interpolate_data,find_api,get_k
+from data_function import interpolate_data,find_api,get_k
 
-class input_controller(QtWidgets.QMainWindow):
+class InputController(QtWidgets.QMainWindow):
     def __init__(self):
         super().__init__()  # in python3, super(Class, self).xxx = super().xxx
         self.input = Ui_PushoverCurve()
@@ -15,18 +15,18 @@ class input_controller(QtWidgets.QMainWindow):
 
     def setup_control(self):
         # TODO
-        self.input.Browse.clicked.connect(self.BrowseClicked)
-        self.input.savebutton.clicked.connect(self.SavebuttonClicked)
-        self.input.iterationbutton.clicked.connect(self.IterationbuttonClicked)
+        self.input.Browse.clicked.connect(self.browse_clicked)
+        self.input.savebutton.clicked.connect(self.savebutton_clicked)
+        self.input.iterationbutton.clicked.connect(self.iterationbutton_clicked)
 
-    def BrowseClicked(self):
+    def browse_clicked(self):
         fname=QFileDialog.getOpenFileName(self)
         self.input.filename.setText(fname[0])
 
-    def SavebuttonClicked(self):
+    def savebutton_clicked(self):
         self.input.plotwidget.canvas.figure.savefig('Capacity vs Demand.png',dpi=300)
 
-    def IterationbuttonClicked(self):
+    def iterationbutton_clicked(self):
         try:
             #檔案讀取
             with open(self.input.filename.text(),'r') as file :
@@ -40,7 +40,7 @@ class input_controller(QtWidgets.QMainWindow):
             Cv=float(self.input.Cv.text())
             type=self.input.type.currentText()
 
-            [Sd_capacity,Sa_capacity]=Interpolate_data(Sd_capacity,Sa_capacity,200)
+            [Sd_capacity,Sa_capacity]=interpolate_data(Sd_capacity,Sa_capacity,200)
             T_M=Cv/(2.5*Ca)
             T=np.arange(0,6.5,0.05)
             Sa_demand=[round(2.5*Ca,3) if t<T_M else round(Cv/t,3) for t in T]

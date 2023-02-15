@@ -2,7 +2,7 @@ import numpy as np
 import math
 from scipy.interpolate import interp1d # 導入 scipy 中的一維插值工具 interp1d
 
-def Interpolate_data(x,y,n):
+def interpolate_data(x,y,n):
     # 由給定數據點集 (x,y) 求插值函數 fx
     fx = interp1d(x, y,kind='linear') # 由已知數據 (x,y) 求出插值函數 fx
     # 由插值函數 fx 計算插值點的函數值
